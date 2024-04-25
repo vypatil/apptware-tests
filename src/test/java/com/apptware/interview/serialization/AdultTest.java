@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
  * This test class has a validation for {@link com.apptware.interview.serialization.Adult}. The
  * first test tests the validation using a constructor by creating an illegal entity and expecting
  * an error message for the same. The second test has a same purpose using serialization.
- * <p>
- * The candidate is expected to modify the test case and the corresponding class for with the test
- * case is written so that the appropriate exception is thrown with appropriate messages.
- **/
+ *
+ * <p>The candidate is expected to modify the test case and the corresponding class for which the
+ * test case is written so that the appropriate exception is thrown with appropriate messages.
+ */
 class AdultTest {
 
   @Test
