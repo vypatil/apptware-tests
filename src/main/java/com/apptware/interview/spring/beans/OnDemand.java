@@ -1,14 +1,8 @@
 package com.apptware.interview.spring.beans;
 
-import lombok.Getter;
-import org.springframework.stereotype.Component;
+public interface OnDemand {
 
-@Component
-public class OnDemand {
+  SomeEnum getSomeEnum();
 
-  @Getter private final String someString;
-
-  OnDemand(String someString) {
-    this.someString = someString;
-  }
+  String getSomeString();
 }

@@ -15,7 +15,15 @@ class BeanFactoryTest {
   @Test
   void getOnDemandBean() {
     String someString = "Hello World!!!";
-    OnDemand onDemandBean = beanFactory.getOnDemandBean(someString);
-    Assertions.assertThat(onDemandBean.getSomeString()).isEqualTo(someString);
+    SomeEnum someEnumA = SomeEnum.SOME_ENUM_A;
+    OnDemand onDemandBeanA = beanFactory.getOnDemandBean(someEnumA, someString);
+    Assertions.assertThat(onDemandBeanA.getSomeString()).isEqualTo(someString);
+    Assertions.assertThat(onDemandBeanA.getSomeEnum()).isEqualTo(someEnumA);
+
+    String someOtherString = "Hello Other World!!!";
+    SomeEnum someEnumB = SomeEnum.SOME_ENUM_B;
+    OnDemand onDemandBeanB = beanFactory.getOnDemandBean(someEnumB, someOtherString);
+    Assertions.assertThat(onDemandBeanB.getSomeString()).isEqualTo(someOtherString);
+    Assertions.assertThat(onDemandBeanB.getSomeEnum()).isEqualTo(someEnumB);
   }
 }
