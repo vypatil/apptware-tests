@@ -6,6 +6,7 @@ public class Singleton {
 
   public String s;
 
+  // Throwing an exception is not expected.
   private Singleton() {
     s = "Hello I am a string part of Singleton class";
   }
